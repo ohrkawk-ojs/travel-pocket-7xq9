@@ -1,0 +1,33 @@
+---
+import TravelLayout from '../../../layouts/TravelLayout.astro';
+import CategoryTabs from '../../../components/CategoryTabs.astro';
+import LinkCard from '../../../components/LinkCard.astro';
+import SearchAndFilter from '../../../components/SearchAndFilter.astro';
+import TodaySchedule from '../../../components/TodaySchedule.astro';
+import { travelLinks } from '../../../data/travel-links';
+import { travelSchedule } from '../../../data/travel-schedule';
+import { getNextScheduleDay, getTodaySchedule } from '../../../lib/schedule';
+
+const today = getTodaySchedule(travelSchedule);
+const next = today ?? getNextScheduleDay(travelSchedule);
+const scheduleMode = today ? 'today' : next ? 'next' : 'done';
+const sortedLinks = [...travelLinks].sort((a, b) => Number(Boolean(b.important)) - Number(Boolean(a.important)) || b.addedAt.localeCompare(a.addedAt));
+---
+<TravelLayout title="여행 링크북 — Travel Pocket">
+  <main class="page">
+    <section class="hero compact">
+      <div class="section-label">TRAVEL POCKET</div>
+      <h1>여행 링크북</h1>
+      <p>필요한 장소, 예약 링크, 일정, 지도 버튼을 여행 중 바로 열 수 있게 정리합니다.</p>
+    </section>
+
+    <TodaySchedule day={next} mode={scheduleMode} />
+
+    <SearchAndFilter />
+    <CategoryTabs />
+
+    <section class="link-grid" aria-label="여행 링크 목록">
+      {sortedLinks.map((link) => <LinkCard link={link} />)}
+    </section>
+  </main>
+</TravelLayout>

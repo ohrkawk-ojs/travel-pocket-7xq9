@@ -1,0 +1,22 @@
+---
+import { categoryLabel } from '../lib/categories';
+import { buildDirectionsUrl, buildMapsSearchUrl } from '../lib/maps';
+import type { TravelLink } from '../data/travel-links';
+const { link } = Astro.props as { link: TravelLink };
+const mapsUrl = buildMapsSearchUrl(link.place);
+const directionsUrl = buildDirectionsUrl(link.place);
+---
+<article class={`link-card ${link.important ? 'important' : ''}`} data-category={link.category} data-important={link.important ? 'true' : 'false'} data-search={`${link.title} ${link.memo ?? ''} ${(link.tags ?? []).join(' ')}`.toLowerCase()}>
+  <div class="card-head">
+    <span class="pill">{categoryLabel(link.category)}</span>
+    {link.important && <span class="pill hot">중요</span>}
+  </div>
+  <h3>{link.title}</h3>
+  {link.memo && <p>{link.memo}</p>}
+  {link.tags && <div class="tags">{link.tags.map((tag) => <span>#{tag}</span>)}</div>}
+  <div class="card-actions">
+    {link.url && <a class="action" href={link.url} target="_blank" rel="noopener noreferrer">링크 열기</a>}
+    {mapsUrl && <a class="action" href={mapsUrl} target="_blank" rel="noopener noreferrer">지도 보기</a>}
+    {directionsUrl && <a class="action primary" href={directionsUrl} target="_blank" rel="noopener noreferrer">길찾기</a>}
+  </div>
+</article>

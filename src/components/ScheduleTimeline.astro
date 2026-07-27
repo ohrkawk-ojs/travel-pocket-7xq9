@@ -1,0 +1,40 @@
+---
+import { buildDirectionsUrl, buildMapsSearchUrl } from '../lib/maps';
+import { formatKoreanDate, getTodayInTimezone } from '../lib/schedule';
+import type { TravelDay } from '../data/travel-schedule';
+const { days } = Astro.props as { days: TravelDay[] };
+const today = getTodayInTimezone();
+---
+<div class="timeline">
+  {days.map((day) => (
+    <section class={`day-section ${day.date === today ? 'is-today' : ''}`}>
+      <div class="day-heading">
+        <span class="pill hot">{day.dayLabel}</span>
+        {day.date === today && <span class="pill">오늘</span>}
+        <h2>{day.title ?? '일정'}</h2>
+        <p>{formatKoreanDate(day.date)}</p>
+      </div>
+      <div class="schedule-items">
+        {day.items.map((item) => {
+          const place = { name: item.placeName, address: item.address, googleMapsUrl: item.googleMapsUrl };
+          const mapsUrl = buildMapsSearchUrl(place);
+          const directionsUrl = buildDirectionsUrl(place);
+          return (
+            <article class="schedule-card">
+              <div class="time">{item.time ?? '시간 미정'}</div>
+              <div>
+                <h3>{item.title}</h3>
+                {item.placeName && <p class="place">📍 {item.placeName}</p>}
+                {item.memo && <p>{item.memo}</p>}
+                <div class="card-actions">
+                  {mapsUrl && <a class="action" href={mapsUrl} target="_blank" rel="noopener noreferrer">지도 보기</a>}
+                  {directionsUrl && <a class="action primary" href={directionsUrl} target="_blank" rel="noopener noreferrer">길찾기</a>}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</div>

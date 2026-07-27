@@ -1,0 +1,32 @@
+<section class="search-panel">
+  <label for="travel-search">빠른 검색</label>
+  <input id="travel-search" type="search" placeholder="장소, 예약, 메모 검색" autocomplete="off" />
+</section>
+<script>
+  const searchInput = document.querySelector('#travel-search');
+  const tabs = Array.from(document.querySelectorAll('[data-filter]'));
+  const cards = Array.from(document.querySelectorAll('.link-card'));
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const query = (searchInput?.value || '').toLowerCase().trim();
+    cards.forEach((card) => {
+      const category = card.getAttribute('data-category');
+      const important = card.getAttribute('data-important') === 'true';
+      const haystack = card.getAttribute('data-search') || '';
+      const filterMatch = activeFilter === 'all' || (activeFilter === 'important' ? important : category === activeFilter);
+      const searchMatch = !query || haystack.includes(query);
+      card.toggleAttribute('hidden', !(filterMatch && searchMatch));
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activeFilter = tab.getAttribute('data-filter') || 'all';
+      tabs.forEach((item) => item.classList.toggle('active', item === tab));
+      applyFilters();
+    });
+  });
+  tabs[0]?.classList.add('active');
+  searchInput?.addEventListener('input', applyFilters);
+</script>

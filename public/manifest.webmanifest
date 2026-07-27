@@ -1,0 +1,10 @@
+{
+  "name": "Travel Pocket",
+  "short_name": "Travel",
+  "description": "개인용 여행 링크북",
+  "start_url": "/travel-pocket-7xq9/t/2026-main-8k3p/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#38bdf8",
+  "icons": []
+}

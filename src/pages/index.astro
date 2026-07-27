@@ -1,0 +1,15 @@
+---
+import TravelLayout from '../layouts/TravelLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<TravelLayout title="Travel Pocket — 개인용 여행 링크북">
+  <main class="landing">
+    <div class="hero-card">
+      <div class="section-label">PRIVATE-LIKE TRAVEL PAGE</div>
+      <h1>여행 링크북</h1>
+      <p>링크, 장소, 일정, 지도 버튼을 한 곳에 모아두는 모바일용 여행 페이지입니다.</p>
+      <p class="notice">검색 차단은 적용되어 있지만, URL을 아는 사람은 볼 수 있습니다. 민감정보는 저장하지 마세요.</p>
+      <a class="wide-button primary" href={`${base}t/2026-main-8k3p/`}>내 여행 링크북 열기</a>
+    </div>
+  </main>
+</TravelLayout>

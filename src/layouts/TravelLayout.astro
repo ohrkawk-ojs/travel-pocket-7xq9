@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+const {
+  title = 'Travel Pocket',
+  description = '개인용 여행 링크북',
+} = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="naverbot" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="theme-color" content="#38bdf8" />
+    <link rel="manifest" href={`${base}manifest.webmanifest`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a href={base} class="brand"><span>✈️</span><strong>Travel Pocket</strong></a>
+        <a href={`${base}t/2026-main-8k3p/`} class="mini-link">링크북</a>
+      </header>
+      <slot />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+---
+import { categories } from '../lib/categories';
+---
+<div class="tabs" role="tablist" aria-label="카테고리 필터">
+  {categories.map((category) => (
+    <button class="tab" type="button" data-filter={category.id}>{category.label}</button>
+  ))}
+</div>

@@ -1,0 +1,39 @@
+---
+import { buildDirectionsUrl, buildMapsSearchUrl } from '../lib/maps';
+import { formatKoreanDate } from '../lib/schedule';
+import type { TravelDay } from '../data/travel-schedule';
+const { day, mode = 'today' } = Astro.props as { day: TravelDay | null; mode?: 'today' | 'next' | 'done' };
+const base = import.meta.env.BASE_URL;
+---
+<section class="today-card">
+  <div class="section-label">{mode === 'today' ? '오늘 일정' : mode === 'next' ? '다가오는 일정' : '일정'}</div>
+  {day ? (
+    <>
+      <h2>{day.dayLabel} {day.title && `— ${day.title}`}</h2>
+      <p class="muted">{formatKoreanDate(day.date)}</p>
+      <div class="today-list">
+        {day.items.slice(0, 5).map((item) => {
+          const place = { name: item.placeName, address: item.address, googleMapsUrl: item.googleMapsUrl };
+          const mapsUrl = buildMapsSearchUrl(place);
+          const directionsUrl = buildDirectionsUrl(place);
+          return (
+            <div class="today-item">
+              <strong>{item.time ?? '시간 미정'}</strong>
+              <span>{item.title}</span>
+              <div class="inline-actions">
+                {mapsUrl && <a href={mapsUrl} target="_blank" rel="noopener noreferrer">지도</a>}
+                {directionsUrl && <a href={directionsUrl} target="_blank" rel="noopener noreferrer">길찾기</a>}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <a class="wide-button" href={`${base}t/2026-main-8k3p/schedule/`}>전체 일정 보기</a>
+    </>
+  ) : (
+    <>
+      <h2>등록된 일정이 없습니다</h2>
+      <p class="muted">여행 일정이나 장소를 보내주면 이곳에 정리됩니다.</p>
+    </>
+  )}
+</section>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="naverbot" content="noindex, nofollow, noarchive, nosnippet">
+<title>오사카 가족여행 2026</title>
+<style>
+  :root{
+    --bg:#faf6f0;
+    --card:#ffffff;
+    --ink:#2b2420;
+    --muted:#8a7d70;
+    --line:#ece2d5;
+    --primary:#d9622b;
+    --primary-dark:#b8481c;
+    --accent:#1f6f6f;
+    --accent-soft:#e6f2f1;
+    --primary-soft:#fbe6d8;
+    --radius:16px;
+    --shadow:0 2px 10px rgba(43,36,32,0.06);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    line-height:1.55;
+    -webkit-text-size-adjust:100%;
+  }
+  .app{
+    max-width:520px;
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--bg);
+    position:relative;
+    padding-bottom:76px;
+  }
+  header.top{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:var(--bg);
+    padding:14px 16px 0 16px;
+    border-bottom:1px solid var(--line);
+  }
+  header.top h1{
+    font-size:19px;
+    margin:0 0 2px 0;
+    letter-spacing:-0.2px;
+  }
+  header.top .sub{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-bottom:10px;
+  }
+  nav.tabs{
+    display:flex;
+    gap:6px;
+    overflow-x:auto;
+    padding:0 16px 10px 16px;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  nav.tabs::-webkit-scrollbar{display:none;}
+  nav.tabs button{
+    flex:0 0 auto;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--ink);
+    padding:7px 13px;
+    border-radius:999px;
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+  }
+  nav.tabs button.active{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:#fff;
+  }
+  main{padding:14px 16px 8px 16px;}
+  section.page{display:none;}
+  section.page.active{display:block;animation:fade .18s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px;
+    margin-bottom:12px;
+    box-shadow:var(--shadow);
+  }
+  .card h2{margin:0 0 8px 0;font-size:16px;}
+  .card h3{margin:0 0 6px 0;font-size:14.5px;}
+  .hero{
+    background:linear-gradient(135deg,var(--primary) 0%, var(--primary-dark) 100%);
+    color:#fff;
+    border:none;
+  }
+  .hero .dday{
+    font-size:26px;
+    font-weight:800;
+    margin:2px 0 6px 0;
+  }
+  .hero .dates{font-size:13px;opacity:.92;}
+  .row{display:flex;gap:10px;flex-wrap:wrap;}
+  .pill-tag{
+    display:inline-block;
+    font-size:11.5px;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:999px;
+    background:var(--primary-soft);
+    color:var(--primary-dark);
+    margin-right:6px;
+  }
+  .pill-tag.blue{background:var(--accent-soft);color:var(--accent);}
+  .kv{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .k{color:var(--muted);}
+  .kv .v{font-weight:600;text-align:right;}
+
+  .daygrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;}
+  .daycard{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:12px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+  .daycard .d{font-size:11.5px;color:var(--primary-dark);font-weight:800;}
+  .daycard .t{font-size:13.5px;font-weight:700;margin:3px 0 2px 0;}
+  .daycard .s{font-size:11.5px;color:var(--muted);}
+
+  .quicklinks{display:flex;gap:8px;margin-top:4px;}
+  .quicklinks a{
+    flex:1;
+    text-align:center;
+    padding:12px 6px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border-radius:12px;
+    font-size:12.5px;
+    font-weight:700;
+    text-decoration:none;
+  }
+
+  .timeline{position:relative;padding-left:20px;}
+  .timeline::before{
+    content:"";
+    position:absolute;left:6px;top:4px;bottom:4px;
+    width:2px;background:var(--line);
+  }
+  .titem{position:relative;margin-bottom:16px;}
+  .titem:last-child{margin-bottom:0;}
+  .titem::before{
+    content:"";
+    position:absolute;left:-20px;top:3px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--primary);
+    border:2px solid var(--bg);
+  }
+  .titem .time{font-size:12px;font-weight:800;color:var(--primary-dark);}
+  .titem .ttl{font-size:14.5px;font-weight:700;margin:2px 0 4px 0;}
+  .titem .desc{font-size:13px;color:#4b4038;}
+  .titem .desc .muted{color:var(--muted);}
+
+  .maplink{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    margin-top:6px;
+    font-size:12px;
+    font-weight:700;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid var(--accent);
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .tip{
+    background:var(--accent-soft);
+    border-radius:12px;
+    padding:10px 12px;
+    font-size:12.5px;
+    color:#1a4a4a;
+    margin-top:6px;
+  }
+  .tip b{color:var(--accent);}
+
+  .groupname{
+    font-size:13px;
+    font-weight:800;
+    color:var(--primary-dark);
+    margin:18px 0 8px 0;
+  }
+  .groupname:first-child{margin-top:0;}
+
+  .food-card{border-bottom:1px solid var(--line);padding:12px 0;}
+  .food-card:last-child{border-bottom:none;}
+  .food-card .name{font-size:14.5px;font-weight:700;}
+  .food-card .meta{font-size:12.5px;color:var(--muted);margin:3px 0 4px 0;}
+  .food-card .note{font-size:13px;}
+
+  table.cmp{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px;}
+  table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 6px;text-align:left;}
+  table.cmp th{background:var(--primary-soft);color:var(--primary-dark);}
+
+  footer.bottomnav{
+    position:fixed;
+    left:0;right:0;bottom:0;
+    max-width:520px;
+    margin:0 auto;
+    background:var(--card);
+    border-top:1px solid var(--line);
+    display:flex;
+    padding:8px 4px calc(8px + env(safe-area-inset-bottom)) 4px;
+    z-index:30;
+  }
+  footer.bottomnav button{
+    flex:1;
+    background:none;
+    border:none;
+    font-size:10.5px;
+    color:var(--muted);
+    font-weight:700;
+    padding:6px 2px;
+    cursor:pointer;
+  }
+  footer.bottomnav button.active{color:var(--primary);}
+  footer.bottomnav button .ic{display:block;font-size:16px;margin-bottom:2px;}
+
+  .src{font-size:11px;color:var(--muted);text-align:center;margin:14px 0 4px 0;}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="top">
+    <h1>오사카 가족여행</h1>
+    <div class="sub">2026.07.29(수) ~ 08.01(토) · 3박4일 · 난바/도톤보리 숙소</div>
+    <nav class="tabs" id="tabs">
+      <button data-page="home">홈</button>
+      <button data-page="day1">Day1</button>
+      <button data-page="day2">Day2</button>
+      <button data-page="day3">Day3</button>
+      <button data-page="day4">Day4</button>
+      <button data-page="food">맛집</button>
+      <button data-page="spots">가야할곳</button>
+      <button data-page="transport">이동방법</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="page" id="page-home">
+      <div class="card hero">
+        <div>여행까지</div>
+        <div class="dday" id="ddayText">D-day 계산중</div>
+        <div class="dates">7/29(수) 13:15 인천 출발 → 8/1(토) 19:55 인천 도착</div>
+      </div>
+
+      <div class="card">
+        <h2>여행 요약</h2>
+        <div class="kv"><span class="k">가는편</span><span class="v">에어서울 RS0713<br>ICN 13:15 → KIX 15:15</span></div>
+        <div class="kv"><span class="k">오는편</span><span class="v">에어서울 RS0716<br>KIX 18:00 → ICN 19:55</span></div>
+        <div class="kv"><span class="k">숙소 지역</span><span class="v">난바 / 도톤보리 인근</span></div>
+        <div class="kv"><span class="k">인원</span><span class="v">성인 2 + 자녀(10세) 1</span></div>
+        <div class="kv"><span class="k">관심사</span><span class="v">맛집 · 랜드마크 · 쇼핑</span></div>
+      </div>
+
+      <div class="card">
+        <h2>날짜별 일정 바로가기</h2>
+        <div class="daygrid">
+          <div class="daycard" data-goto="day1">
+            <div class="d">DAY 1 · 7/29(수)</div>
+            <div class="t">도착 &amp; 도톤보리</div>
+            <div class="s">공항→숙소, 야경산책</div>
+          </div>
+          <div class="daycard" data-goto="day2">
+            <div class="d">DAY 2 · 7/30(목)</div>
+            <div class="t">오사카성 &amp; 쇼핑</div>
+            <div class="s">구로몬시장, 신사이바시</div>
+          </div>
+          <div class="daycard" data-goto="day3">
+            <div class="d">DAY 3 · 7/31(금)</div>
+            <div class="t">가이유칸 &amp; 우메다</div>
+            <div class="s">수족관, 스카이빌딩</div>
+          </div>
+          <div class="daycard" data-goto="day4">
+            <div class="d">DAY 4 · 8/1(토)</div>
+            <div class="t">마무리 &amp; 공항</div>
+            <div class="s">자유시간 후 귀국</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>모아보기</h2>
+        <div class="quicklinks">
+          <a href="#" data-goto="food">맛집<br>모아보기</a>
+          <a href="#" data-goto="spots">가야할 곳<br>모아보기</a>
+          <a href="#" data-goto="transport">이동방법<br>안내</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>여행 필수 정보</h2>
+        <h3>환전 &amp; 통신</h3>
+        <p style="font-size:13px;margin:0 0 10px 0;">엔화는 출국 전 국내 은행 앱 환전 또는 공항 환전소 이용. 유심/이심은 출발 전 미리 구매해두면 공항에서 바로 개통 가능.</p>
+        <h3>긴급 연락처</h3>
+        <div class="kv"><span class="k">일본 경찰</span><span class="v">110</span></div>
+        <div class="kv"><span class="k">일본 구급/화재</span><span class="v">119</span></div>
+        <div class="kv"><span class="k">외교부 영사콜센터</span><span class="v">+82-2-3210-0404</span></div>
+        <p style="font-size:12px;color:var(--muted);margin:8px 0 0 0;">여권 분실 등 긴급 상황 시 영사콜센터(24시간, 해외 무료전화 앱 지원) 또는 주오사카 대한민국총영사관에 연락.</p>
+      </div>
+
+      <div class="src">참고: 트립스토어, KKday, 난카이전철, 오사카관광청, 외교부 자료 기준 (변동 가능성 있음)</div>
+    </section>
+
+    <!-- DAY 1 -->
+    <section class="page" id="page-day1">
+      <div class="card">
+        <span class="pill-tag">DAY 1 · 7/29(수)</span><span class="pill-tag blue">도착일</span>
+        <h2 style="margin-top:8px;">간사이공항 도착 &amp; 도톤보리 야경</h2>
+        <div class="timeline">
+          <div class="titem">
+            <div class="time">13:15</div>
+            <div class="ttl">인천공항(ICN) 출발</div>
+            <div class="desc">에어서울 RS0713 · 터미널2</div>
+          </div>
+          <div class="titem">
+            <div class="time">15:15</div>
+            <div class="ttl">간사이공항(KIX) 도착</div>
+            <div class="desc">터미널1 · 입국심사+수하물 수취 약 40~60분 예상</div>
+          </div>
+          <div class="titem">
+            <div class="time">16:00</div>
+            <div class="ttl">공항 → 난바 이동</div>
+            <div class="desc">난카이 라피트 특급 이용 (약 38~44분, 레귤러석 성인 700엔/어린이 350엔). 자세한 내용은 <span class="muted">이동방법</span> 탭 참고
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Nankai+Namba+Station" target="_blank" rel="noopener noreferrer">난바역 지도</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">17:00</div>
+            <div class="ttl">숙소 체크인</div>
+            <div class="desc">난바/도톤보리 인근 · 짐 정리 후 휴식</div>
+          </div>
+          <div class="titem">
+            <div class="time">18:30</div>
+            <div class="ttl">저녁: 치보 도톤보리 본점 (오코노미야키)</div>
+            <div class="desc">화려한 철판 퍼포먼스, 아이도 즐기기 좋은 메뉴 · 예산 인당 2~3만원대
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Chibo+Dotonbori+Okonomiyaki" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">20:00</div>
+            <div class="ttl">도톤보리 야경 산책</div>
+            <div class="desc">글리코 사인, 도톤보리 리버 야경
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Osaka" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">21:00</div>
+            <div class="ttl">디저트: 리쿠로 오지상노 미세 치즈케이크</div>
+            <div class="desc">부드러운 식감으로 아이도 먹기 좋음 · 포장해서 숙소에서
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Rikuro+Ojisan+no+Mise+Namba" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="tip"><b>Tip.</b> 첫날은 이동 시간이 길어 아이가 지치기 쉬워요. 저녁 일정은 여유 있게, 무리한 추가 일정은 자제하세요.</div>
+      </div>
+    </section>
+
+    <!-- DAY 2 -->
+    <section class="page" id="page-day2">
+      <div class="card">
+        <span class="pill-tag">DAY 2 · 7/30(목)</span><span class="pill-tag blue">시내 관광</span>
+        <h2 style="margin-top:8px;">오사카성 &amp; 구로몬시장 &amp; 신사이바시</h2>
+        <div class="timeline">
+          <div class="titem">
+            <div class="time">09:00</div>
+            <div class="ttl">숙소 근처 아침식사</div>
+            <div class="desc">카페 또는 편의점 간단 식사 후 출발</div>
+          </div>
+          <div class="titem">
+            <div class="time">09:30</div>
+            <div class="ttl">오사카성</div>
+            <div class="desc">천수각 입장료 성인 1,200엔 / 중학생 이하 무료. 엘리베이터 대기 30분+, 유모차 불편 → <b>해자 산책 + 극락교(고쿠라쿠바시) 포토존</b> 위주 추천
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">12:00</div>
+            <div class="ttl">점심: 구로몬시장 먹거리 투어</div>
+            <div class="desc">와규 꼬치(1,000~1,500엔), 참치뱃살 오오토로(2,000~3,000엔), 가리비버터구이(800~1,000엔), 다코야키(500~600엔) · 09~18시 영업, 10~14시가 가장 활기참
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">14:00</div>
+            <div class="ttl">신사이바시스지 쇼핑거리</div>
+            <div class="desc">아케이드형 쇼핑거리, 비 걱정 없이 산책 가능 · 화장품, 잡화, 캐릭터숍 다수
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi-suji+Shopping+Street" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">18:30</div>
+            <div class="ttl">저녁: 하리쥬 (함박스테이크 &amp; 스키야키)</div>
+            <div class="desc">신사이바시 아케이드 초입, 넓고 차분한 매장 · 예산 인당 3~4만원대
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Hariju+Shinsaibashi" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="tip"><b>Tip.</b> 오사카성은 내부보다 외부 산책이 아이와 함께라면 더 편해요. 구로몬시장은 현금(엔화) 준비해두면 편리합니다.</div>
+      </div>
+    </section>
+
+    <!-- DAY 3 -->
+    <section class="page" id="page-day3">
+      <div class="card">
+        <span class="pill-tag">DAY 3 · 7/31(금)</span><span class="pill-tag blue">가이유칸 · 우메다</span>
+        <h2 style="margin-top:8px;">수족관 &amp; 전망대 &amp; 쇼핑</h2>
+        <div class="timeline">
+          <div class="titem">
+            <div class="time">09:30</div>
+            <div class="ttl">숙소 출발 → 오사카코역</div>
+            <div class="desc">오사카메트로 주오선 이용</div>
+          </div>
+          <div class="titem">
+            <div class="time">10:00</div>
+            <div class="ttl">가이유칸 아쿠아리움</div>
+            <div class="desc">입장료 성인 2,700엔 / 어린이 1,400엔 · 운영 10:00~20:00(최종입장 폐관 1시간 전, 계절별 변동) · 오사카코역 1번 출구 도보 약 5분
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">13:00</div>
+            <div class="ttl">점심: 텐포잔 하버빌리지 인근</div>
+            <div class="desc">수족관 인근 식당가에서 편하게 식사</div>
+          </div>
+          <div class="titem">
+            <div class="time">15:00</div>
+            <div class="ttl">우메다 이동</div>
+            <div class="desc">지하철/JR 이용 (약 30분 내외)</div>
+          </div>
+          <div class="titem">
+            <div class="time">15:30</div>
+            <div class="ttl">우메다 스카이빌딩 전망대 or 쇼핑</div>
+            <div class="desc">공중정원 전망대에서 오사카 시내 조망, 또는 한큐백화점·요도바시카메라에서 쇼핑
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">지도 보기</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">18:30</div>
+            <div class="ttl">저녁: 우메다 인근 맛집</div>
+            <div class="desc">역 지하상가(디아모르 오사카 등) 식당가 이용 편리</div>
+          </div>
+        </div>
+        <div class="tip"><b>Tip.</b> 이동 거리가 긴 하루예요. 가이유칸 관람 후 중간에 카페에서 휴식 시간을 넣어주세요.</div>
+      </div>
+    </section>
+
+    <!-- DAY 4 -->
+    <section class="page" id="page-day4">
+      <div class="card">
+        <span class="pill-tag">DAY 4 · 8/1(토)</span><span class="pill-tag blue">마지막날</span>
+        <h2 style="margin-top:8px;">자유시간 &amp; 공항 복귀</h2>
+        <div class="timeline">
+          <div class="titem">
+            <div class="time">08:30</div>
+            <div class="ttl">체크아웃 &amp; 짐 정리</div>
+            <div class="desc">코인로커 보관 또는 전날 신청한 당일 수하물 배송 서비스 활용 (자세한 내용 <span class="muted">이동방법</span> 탭 참고)</div>
+          </div>
+          <div class="titem">
+            <div class="time">09:00</div>
+            <div class="ttl">난바 인근 자유시간</div>
+            <div class="desc">마지막 쇼핑 또는 도톤보리 마지막 산책, 못 가본 맛집 방문</div>
+          </div>
+          <div class="titem">
+            <div class="time">12:30</div>
+            <div class="ttl">점심 식사</div>
+            <div class="desc">난바 인근에서 가볍게</div>
+          </div>
+          <div class="titem">
+            <div class="time">14:00</div>
+            <div class="ttl">난바역 → 간사이공항</div>
+            <div class="desc">난카이 라피트/급행 이용 (약 38~44분)
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport" target="_blank" rel="noopener noreferrer">공항 지도</a>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="time">15:00</div>
+            <div class="ttl">공항 도착 &amp; 수속</div>
+            <div class="desc">체크인, 출국심사, 면세점 여유 있게</div>
+          </div>
+          <div class="titem">
+            <div class="time">18:00</div>
+            <div class="ttl">간사이공항(KIX) 출발</div>
+            <div class="desc">에어서울 RS0716 → 인천 19:55 도착</div>
+          </div>
+        </div>
+        <div class="tip"><b>Tip.</b> 국제선은 출발 2시간 전 도착을 권장해요. 오전 일정은 짧고 가볍게 잡아주세요.</div>
+      </div>
+    </section>
+
+    <!-- FOOD -->
+    <section class="page" id="page-food">
+      <div class="card">
+        <h2>맛집 모아보기</h2>
+
+        <div class="groupname">난바 · 도톤보리</div>
+        <div class="food-card">
+          <div class="name">치보 도톤보리 본점 <span class="pill-tag">오코노미야키</span></div>
+          <div class="meta">예산 인당 2~3만원 · Day1 저녁</div>
+          <div class="note">퍼포먼스가 볼거리, 엘리베이터로 층 이동 쾌적</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Chibo+Dotonbori+Okonomiyaki" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">카니도라쿠 도톤보리점 <span class="pill-tag">대게 요리</span></div>
+          <div class="meta">예산 인당 6~8만원</div>
+          <div class="note">거대 게 간판이 상징 · 전좌석 금연, 개별룸 있어 가족 식사에 좋음</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kani+Doraku+Dotonbori" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">겐로쿠스시 도톤보리점 <span class="pill-tag">회전초밥</span></div>
+          <div class="meta">예산 인당 1.5~2만원</div>
+          <div class="note">계란초밥·유부초밥 등 아이 친화적 메뉴 다양, 가성비 좋음</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Genroku+Sushi+Dotonbori" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">리쿠로 오지상노 미세 <span class="pill-tag">치즈케이크</span></div>
+          <div class="meta">1판 약 1만원대</div>
+          <div class="note">부드러운 식감, 포장 후 숙소에서 즐기기 좋음</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Rikuro+Ojisan+no+Mise+Namba" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+
+        <div class="groupname">신사이바시</div>
+        <div class="food-card">
+          <div class="name">하리쥬 <span class="pill-tag">함박스테이크·스키야키</span></div>
+          <div class="meta">예산 인당 3~4만원</div>
+          <div class="note">아케이드 초입, 넓고 차분한 매장으로 가족 식사에 적합</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Hariju+Shinsaibashi" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+
+        <div class="groupname">구로몬시장 (스트리트 푸드)</div>
+        <div class="food-card">
+          <div class="name">와규 꼬치 &amp; 참치뱃살(오오토로)</div>
+          <div class="meta">꼬치 1,000~1,500엔 · 오오토로 2,000~3,000엔</div>
+          <div class="note">시장 구경하며 즉석에서 맛보기 좋음</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">가리비버터구이 &amp; 다코야키</div>
+          <div class="meta">가리비 800~1,000엔 · 다코야키 500~600엔</div>
+          <div class="note">아이도 부담 없이 먹기 좋은 간식류</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+      </div>
+      <div class="src">가격·정보는 트립스토어, SavorJapan, Trip.com 등 참고 (변동 가능성 있음)</div>
+    </section>
+
+    <!-- SPOTS -->
+    <section class="page" id="page-spots">
+      <div class="card">
+        <h2>가야할 곳 모아보기</h2>
+
+        <div class="groupname">관광지 · 랜드마크</div>
+        <div class="food-card">
+          <div class="name">오사카성</div>
+          <div class="meta">천수각 성인 1,200엔 / 중학생 이하 무료</div>
+          <div class="note">아이 동반 시 엘리베이터 대기(30분+)와 유모차 이용 불편 고려, 해자 산책+극락교 포토존 위주 추천</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">가이유칸 (오사카 아쿠아리움)</div>
+          <div class="meta">성인 2,700엔 / 어린이 1,400엔 · 10:00~20:00</div>
+          <div class="note">오사카코역 도보 5분, 세계 최대급 실내 수족관</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Osaka+Aquarium+Kaiyukan" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">우메다 스카이빌딩</div>
+          <div class="meta">공중정원 전망대</div>
+          <div class="note">오사카 시내 전경을 한눈에, 해질녘 방문 추천</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Umeda+Sky+Building" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+
+        <div class="groupname">시장 · 거리</div>
+        <div class="food-card">
+          <div class="name">구로몬시장</div>
+          <div class="meta">대부분 09:00~18:00 · 10~14시가 가장 붐빔</div>
+          <div class="note">신선식품·스트리트푸드 즉석 시식 위주 시장</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">도톤보리</div>
+          <div class="meta">야경 명소</div>
+          <div class="note">글리코 사인 포토존, 강변 산책로</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Dotonbori+Osaka" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+
+        <div class="groupname">쇼핑</div>
+        <div class="food-card">
+          <div class="name">신사이바시스지 쇼핑거리</div>
+          <div class="meta">아케이드형, 우천 걱정 없음</div>
+          <div class="note">화장품·잡화·캐릭터숍 등 밀집</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Shinsaibashi-suji+Shopping+Street" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+        <div class="food-card">
+          <div class="name">돈키호테 도톤보리점</div>
+          <div class="meta">24시간 운영 (매장별 상이)</div>
+          <div class="note">기념품·과자·생활용품, 늦은 시간에도 방문 가능</div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Don+Quijote+Dotonbori" target="_blank" rel="noopener noreferrer">지도 보기</a>
+        </div>
+      </div>
+      <div class="src">운영시간·요금은 계절/현지 사정에 따라 변동될 수 있어 방문 전 최신 정보 확인 권장</div>
+    </section>
+
+    <!-- TRANSPORT -->
+    <section class="page" id="page-transport">
+      <div class="card">
+        <h2>공항 ↔ 시내 이동</h2>
+        <h3>난카이 라피트 (특급)</h3>
+        <div class="kv"><span class="k">소요시간</span><span class="v">간사이공항 ↔ 난바 약 38~44분</span></div>
+        <div class="kv"><span class="k">레귤러석</span><span class="v">성인 700엔 / 어린이 350엔</span></div>
+        <div class="kv"><span class="k">슈퍼시트</span><span class="v">성인 910엔 / 어린이 560엔</span></div>
+        <p style="font-size:12.5px;color:var(--muted);margin:6px 0 0 0;">난카이 전철 홈페이지·역 매표소·자동판매기에서 예약 가능. 티켓리스 서비스 이용 시 150엔 할인.</p>
+        <h3 style="margin-top:14px;">공항급행</h3>
+        <p style="font-size:13px;margin:0;">라피트보다 요금이 저렴하지만 소요시간이 더 길어요. 짐이 많은 도착일·출발일엔 라피트를 추천합니다.</p>
+      </div>
+
+      <div class="card">
+        <h2>시내 교통패스 비교</h2>
+        <table class="cmp">
+          <tr><th>패스</th><th>가격(원)</th><th>혜택</th></tr>
+          <tr><td>오사카 주유패스</td><td>1일 33,120<br>2일 47,315</td><td>지하철·버스 무제한 + 명소 약 40곳 무료입장</td></tr>
+          <tr><td>오사카 지하철패스</td><td>1일 11,100<br>2일 17,764</td><td>지하철+일부 버스만, 명소는 별도 결제</td></tr>
+          <tr><td>JR 간사이패스</td><td>1일 약 26,500<br>3일 약 57,241</td><td>간사이 JR + 교토 지하철 등, 교토 연계 시 유리</td></tr>
+          <tr><td>간사이 레일웨이패스</td><td>2일 약 52,900<br>3일 약 69,085</td><td>간사이 사철·버스 무제한 + 명소 약 260곳 할인</td></tr>
+        </table>
+        <div class="tip"><b>추천.</b> 이번 여행처럼 오사카성·가이유칸 등 명소를 여러 곳 도는 가족 일정이라면 <b>오사카 주유패스</b>가 효율적이에요.</div>
+      </div>
+
+      <div class="card">
+        <h2>마지막날 짐 관리</h2>
+        <p style="font-size:13px;margin:0 0 8px 0;">체크아웃 후 공항까지 짐을 들고 다니기 번거롭다면 두 가지 방법이 있어요.</p>
+        <div class="kv"><span class="k">코인로커</span><span class="v">역·시내 곳곳에 위치, 당일 이용</span></div>
+        <div class="kv"><span class="k">수하물 배송 서비스</span><span class="v">호텔→공항 당일 배송 (전날 오후까지 신청 필요)</span></div>
+        <p style="font-size:12px;color:var(--muted);margin:8px 0 0 0;">가족 여행이라 짐이 많다면 수하물 배송 서비스를 이용하면 마지막날 훨씬 홀가분하게 다닐 수 있어요.</p>
+      </div>
+
+      <div class="card">
+        <h2>긴급 연락처</h2>
+        <div class="kv"><span class="k">일본 경찰</span><span class="v">110</span></div>
+        <div class="kv"><span class="k">일본 구급/화재</span><span class="v">119</span></div>
+        <div class="kv"><span class="k">외교부 영사콜센터</span><span class="v">+82-2-3210-0404</span></div>
+      </div>
+      <div class="src">교통 요금·패스 가격은 KKday, 난카이전철, 트립스토어 자료 기준 (환율·개정에 따라 변동 가능)</div>
+    </section>
+
+  </main>
+
+  <footer class="bottomnav" id="bottomnav">
+    <button data-page="home"><span class="ic">⌂</span>홈</button>
+    <button data-page="day1"><span class="ic">1</span>Day1</button>
+    <button data-page="day2"><span class="ic">2</span>Day2</button>
+    <button data-page="day3"><span class="ic">3</span>Day3</button>
+    <button data-page="day4"><span class="ic">4</span>Day4</button>
+  </footer>
+</div>
+
+<script>
+  var pages = ["home","day1","day2","day3","day4","food","spots","transport"];
+
+  function showPage(id, push){
+    if(pages.indexOf(id) === -1) id = "home";
+    pages.forEach(function(p){
+      var el = document.getElementById("page-"+p);
+      if(el) el.classList.toggle("active", p===id);
+    });
+    document.querySelectorAll('#tabs button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-page')===id);
+    });
+    document.querySelectorAll('#bottomnav button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-page')===id);
+    });
+    var activeTab = document.querySelector('#tabs button[data-page="'+id+'"]');
+    if(activeTab) activeTab.scrollIntoView({block:'nearest', inline:'center'});
+    if(push !== false) location.hash = id;
+    window.scrollTo(0,0);
+  }
+
+  document.querySelectorAll('[data-page]').forEach(function(el){
+    el.addEventListener('click', function(){ showPage(this.getAttribute('data-page')); });
+  });
+  document.querySelectorAll('[data-goto]').forEach(function(el){
+    el.addEventListener('click', function(e){ e.preventDefault(); showPage(this.getAttribute('data-goto')); });
+  });
+  window.addEventListener('hashchange', function(){
+    showPage(location.hash.replace('#',''), false);
+  });
+
+  // initial page
+  var initial = location.hash ? location.hash.replace('#','') : 'home';
+  showPage(initial, false);
+
+  // D-day calculation
+  (function(){
+    var start = new Date(2026,6,29); // month is 0-indexed: 6 = July
+    var end = new Date(2026,7,1);    // 7 = August
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    start.setHours(0,0,0,0);
+    end.setHours(0,0,0,0);
+    var msPerDay = 24*60*60*1000;
+    var diffStart = Math.round((start-today)/msPerDay);
+    var diffEnd = Math.round((end-today)/msPerDay);
+    var el = document.getElementById('ddayText');
+    if(diffStart > 0){
+      el.textContent = "D-" + diffStart;
+    } else if(diffStart <= 0 && diffEnd >= 0){
+      var dayNum = Math.abs(diffStart) + 1;
+      el.textContent = "여행 중 · Day " + dayNum;
+    } else {
+      el.textContent = "즐거운 여행 되세요";
+    }
+  })();
+</script>
+</body>
+</html>

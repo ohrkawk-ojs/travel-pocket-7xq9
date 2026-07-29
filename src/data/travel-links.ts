@@ -42,15 +42,28 @@ export const travelLinks: TravelLink[] = [
   },
   {
     id: 'sample-hotel',
-    title: '숙소 후보',
+    title: '난바/도톤보리 숙소',
     category: 'hotel',
-    memo: '체크인 시간, 주소, 예약 링크를 나중에 업데이트',
+    memo: '도톤프라자 하차 후 도보 이동 기준. 실제 객실/예약번호 등 민감정보는 공개하지 않음.',
     tags: ['숙소'],
     important: true,
     addedAt: '2026-07-27',
     place: {
       name: 'Osaka Station',
       address: 'Osaka Station, Osaka, Japan'
+    }
+  },
+  {
+    id: 'kix-limousine-dotonplaza',
+    title: '간사이공항 → 도톤프라자 리무진버스 실적',
+    category: 'transport',
+    memo: '10번 승강장, 16:30 탑승 기록. 요금 지출: 대인 1,800엔 × 2명 + 소인 900엔 × 1명 = 총 4,500엔. 사진 시간표 기준 16시대 16:00/16:30 확인.',
+    tags: ['리무진버스', '도톤프라자', '지출', '실적'],
+    important: true,
+    addedAt: '2026-07-29',
+    place: {
+      name: 'Kansai International Airport Terminal 1 Bus Stop 10',
+      address: 'Kansai International Airport Terminal 1 Bus Stop 10'
     }
   },
   {

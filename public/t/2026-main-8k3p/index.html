@@ -209,6 +209,12 @@
   .food-card .meta{font-size:12.5px;color:var(--muted);margin:3px 0 4px 0;}
   .food-card .note{font-size:13px;}
 
+  .phrase-card{border-bottom:1px solid var(--line);padding:11px 0;}
+  .phrase-card:last-child{border-bottom:none;}
+  .phrase-card .ko{font-size:13px;color:var(--muted);}
+  .phrase-card .jp{font-size:15px;font-weight:800;margin:2px 0;}
+  .phrase-card .read{font-size:12.5px;color:#4b4038;}
+
   table.cmp{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px;}
   table.cmp th,table.cmp td{border:1px solid var(--line);padding:7px 6px;text-align:left;}
   table.cmp th{background:var(--primary-soft);color:var(--primary-dark);}
@@ -255,6 +261,7 @@
       <button data-page="food">맛집</button>
       <button data-page="spots">가야할곳</button>
       <button data-page="transport">이동방법</button>
+      <button data-page="phrase">회화</button>
       <button data-page="budget">예산</button>
     </nav>
   </header>
@@ -1026,6 +1033,205 @@
     </section>
 
 
+    <!-- PHRASE -->
+    <section class="page" id="page-phrase">
+      <div class="card hero">
+        <div>식당·쇼핑 바로 쓰는 일본어</div>
+        <div class="dday">회화 카드</div>
+        <div class="dates">손가락으로 가리켜 보여줘도 되는 짧은 문장 위주로 정리</div>
+      </div>
+
+      <div class="card">
+        <h2>식당 입장 / 자리</h2>
+        <div class="phrase-card">
+          <div class="ko">3명입니다.</div>
+          <div class="jp">3人です。</div>
+          <div class="read">산닌 데스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">아이 한 명 있습니다.</div>
+          <div class="jp">子どもが1人います。</div>
+          <div class="read">코도모가 히토리 이마스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">얼마나 기다려야 하나요?</div>
+          <div class="jp">どのくらい待ちますか。</div>
+          <div class="read">도노쿠라이 마치마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">금연석으로 부탁합니다.</div>
+          <div class="jp">禁煙席でお願いします。</div>
+          <div class="read">킨엔세키데 오네가이시마스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">예약 안 했습니다.</div>
+          <div class="jp">予約していません。</div>
+          <div class="read">요야쿠 시테이마센</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>주문할 때</h2>
+        <div class="phrase-card">
+          <div class="ko">메뉴판 주세요.</div>
+          <div class="jp">メニューをください。</div>
+          <div class="read">메뉴-오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">이거 주세요.</div>
+          <div class="jp">これをください。</div>
+          <div class="read">코레오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">같은 걸로 하나 더 주세요.</div>
+          <div class="jp">同じものをもう一つください。</div>
+          <div class="read">오나지 모노오 모- 히토츠 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">맵지 않게 해주세요.</div>
+          <div class="jp">辛くしないでください。</div>
+          <div class="read">카라쿠 시나이데 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">물 주세요.</div>
+          <div class="jp">お水をください。</div>
+          <div class="read">오미즈오 쿠다사이</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>아이와 식당에서</h2>
+        <div class="phrase-card">
+          <div class="ko">아이용 그릇 주세요.</div>
+          <div class="jp">子ども用のお皿をください。</div>
+          <div class="read">코도모요-노 오사라오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">포크 주세요.</div>
+          <div class="jp">フォークをください。</div>
+          <div class="read">포-쿠오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">숟가락 주세요.</div>
+          <div class="jp">スプーンをください。</div>
+          <div class="read">스푸-응오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">아이 의자 있나요?</div>
+          <div class="jp">子ども用の椅子はありますか。</div>
+          <div class="read">코도모요-노 이스와 아리마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">알레르기가 있습니다.</div>
+          <div class="jp">アレルギーがあります。</div>
+          <div class="read">아레루기-가 아리마스</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>계산 / 포장</h2>
+        <div class="phrase-card">
+          <div class="ko">계산 부탁합니다.</div>
+          <div class="jp">お会計お願いします。</div>
+          <div class="read">오카이케- 오네가이시마스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">카드로 결제할 수 있나요?</div>
+          <div class="jp">カードで払えますか。</div>
+          <div class="read">카-도데 하라에마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">영수증 주세요.</div>
+          <div class="jp">レシートをください。</div>
+          <div class="read">레시-토오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">포장해 주세요.</div>
+          <div class="jp">持ち帰りでお願いします。</div>
+          <div class="read">모치카에리데 오네가이시마스</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>쇼핑 / 계산</h2>
+        <div class="phrase-card">
+          <div class="ko">이거 얼마예요?</div>
+          <div class="jp">これはいくらですか。</div>
+          <div class="read">코레와 이쿠라데스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">이거 주세요.</div>
+          <div class="jp">これをください。</div>
+          <div class="read">코레오 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">다른 색 있나요?</div>
+          <div class="jp">他の色はありますか。</div>
+          <div class="read">호카노 이로와 아리마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">다른 사이즈 있나요?</div>
+          <div class="jp">他のサイズはありますか。</div>
+          <div class="read">호카노 사이즈와 아리마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">봉투 주세요.</div>
+          <div class="jp">袋をください。</div>
+          <div class="read">후쿠로오 쿠다사이</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>면세 / 편의점</h2>
+        <div class="phrase-card">
+          <div class="ko">면세 되나요?</div>
+          <div class="jp">免税できますか。</div>
+          <div class="read">멘제- 데키마스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">여권 여기 있습니다.</div>
+          <div class="jp">パスポートはこちらです。</div>
+          <div class="read">파스포-토와 코치라데스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">봉투 따로 주세요.</div>
+          <div class="jp">袋を分けてください。</div>
+          <div class="read">후쿠로오 와케테 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">데워 주세요.</div>
+          <div class="jp">温めてください。</div>
+          <div class="read">아타타메테 쿠다사이</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">젓가락 주세요.</div>
+          <div class="jp">お箸をください。</div>
+          <div class="read">오하시오 쿠다사이</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>급할 때 한마디</h2>
+        <div class="phrase-card">
+          <div class="ko">화장실은 어디예요?</div>
+          <div class="jp">トイレはどこですか。</div>
+          <div class="read">토이레와 도코데스카</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">괜찮습니다 / 필요 없어요.</div>
+          <div class="jp">大丈夫です。</div>
+          <div class="read">다이죠-부데스</div>
+        </div>
+        <div class="phrase-card">
+          <div class="ko">조금만 천천히 말해주세요.</div>
+          <div class="jp">少しゆっくり話してください。</div>
+          <div class="read">스코시 윳쿠리 하나시테 쿠다사이</div>
+        </div>
+      </div>
+      <div class="src">일본어 발음은 현장 사용용으로 한글 표기했습니다. 정중하게 말할 때는 문장 끝의 “お願いします/ください”를 붙이면 안전합니다.</div>
+    </section>
+
+
     <!-- BUDGET -->
     <section class="page" id="page-budget">
       <div class="card hero">
@@ -1096,12 +1302,13 @@
     <button data-page="day2"><span class="ic">2</span>Day2</button>
     <button data-page="day3"><span class="ic">3</span>Day3</button>
     <button data-page="day4"><span class="ic">4</span>Day4</button>
+    <button data-page="phrase"><span class="ic">話</span>회화</button>
     <button data-page="budget"><span class="ic">₩</span>예산</button>
   </footer>
 </div>
 
 <script>
-  var pages = ["home","day1","day2","day3","day4","food","spots","transport","budget"];
+  var pages = ["home","day1","day2","day3","day4","food","spots","transport","phrase","budget"];
 
   function showPage(id, push){
     if(pages.indexOf(id) === -1) id = "home";
